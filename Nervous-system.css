@@ -1,0 +1,126 @@
+/* ===== Global ===== */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+  
+  h1, h2, h3 {
+    color: #003049;
+    margin-top: 0;
+  }
+  
+  a {
+    color: #005f73;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    margin: 15px 0;
+  }
+  
+  /* ===== Header ===== */
+  header {
+    background-color: #003049;
+    color: white;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  /* ===== Container ===== */
+  .container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* ===== Navigation / TOC ===== */
+  nav {
+    background-color: #e6f0f3;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  nav h2 {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  nav ul li {
+    margin: 10px 0;
+  }
+  
+  nav ul li a {
+    color: #005f73;
+    transition: color 0.2s;
+  }
+  
+  nav ul li a:hover {
+    color: #0a9396;
+  }
+  
+  nav ul li a.active {
+    font-weight: bold;
+    color: #d62828;
+    text-decoration: underline;
+  }
+  
+  /* ===== Sections ===== */
+  section {
+    margin-top: 50px;
+    border-top: 2px solid #dee2e6;
+    padding-top: 30px;
+    position: relative;
+  }
+  
+  section h2 {
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  /* ===== Footer ===== */
+  footer {
+    margin-top: 50px;
+    background-color: #003049;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* ===== Responsive ===== */
+  @media (max-width: 768px) {
+    body {
+      font-size: 16px;
+    }
+  
+    nav, .container {
+      padding: 15px;
+    }
+  
+    nav ul li {
+      font-size: 15px;
+    }
+  }
+  

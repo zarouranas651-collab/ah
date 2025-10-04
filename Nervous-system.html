@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Nervous System and Nervous Tissue</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      background-color: #f5f7fa;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    header {
+      background-color: #003049;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1, h2 {
+      color: #003049;
+    }
+
+    nav {
+      background-color: #e0e0e0;
+      padding: 15px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin: 8px 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #005f73;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    section {
+      margin-top: 40px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      margin: 15px 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #003049;
+      color: white;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>The Nervous System and Nervous Tissue</h1>
+  <p>From Lumen Learning – Educational Simulation</p>
+</header>
+
+<nav class="container">
+  <h2>📚 Table of Contents</h2>
+  <ul>
+    <li><a href="#introduction">1. Introduction</a></li>
+    <li><a href="#structure">2. Structure of the Nervous System</a></li>
+    <li><a href="#function">3. Functions of the Nervous System</a></li>
+    <li><a href="#neurons">4. Neurons and Glial Cells</a></li>
+    <li><a href="#cns-pns">5. CNS vs. PNS</a></li>
+  </ul>
+</nav>
+
+<div class="container">
+
+  <section id="introduction">
+    <h2>1. Introduction</h2>
+    <p>
+      The nervous system is a complex network responsible for transmitting signals between different parts of the body.
+      It is the system that enables humans to sense, think, move, and maintain internal balance (homeostasis).
+    </p>
+    <img src="https://cdn.pixabay.com/photo/2021/10/10/16/53/brain-6697251_1280.jpg" alt="Brain illustration">
+  </section>
+
+  <!-- More sections coming up next... -->
+
+</div>
+
+<footer>
+  &copy; 2025 Nervous System Learning Page (Simulated)
+</footer>
+
+</body>
+</html>
+<link rel="stylesheet" href="Nervous-system.css">
+<script>
+    // COLLAPSIBLE SECTIONS
+    document.addEventListener("DOMContentLoaded", () => {
+      const sections = document.querySelectorAll("section");
+      
+      sections.forEach(section => {
+        const header = section.querySelector("h2");
+        if (header) {
+          header.style.cursor = "pointer";
+          const content = Array.from(section.children).filter(el => el.tagName !== "H2");
+          
+          header.addEventListener("click", () => {
+            content.forEach(el => el.classList.toggle("hidden"));
+          });
+        }
+      });
+    });
+    
+    // ACTIVE TOC HIGHLIGHT ON SCROLL
+    window.addEventListener("scroll", () => {
+      const sections = document.querySelectorAll("section");
+      const tocLinks = document.querySelectorAll("nav ul li a");
+    
+      let currentId = "";
+      sections.forEach(section => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= 150 && rect.bottom >= 150) {
+          currentId = section.id;
+        }
+      });
+    
+      tocLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === `#${currentId}`) {
+          link.classList.add("active");
+        }
+      });
+    });
+    </script>
+    .hidden {
+        display: none;
+      }
+      
+      nav ul li a.active {
+        font-weight: bold;
+        text-decoration: underline;
+        color: #d62828;
+      }
+      
